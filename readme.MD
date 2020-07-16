@@ -11,3 +11,10 @@
 
 ## Install nodemon  
 - npm install -g nodemon  
+
+## Install sequelize  
+- npm install -g sequelize-cli  
+- touch .sequelizerc  
+- npm install --save path  
+- npm install --save sequelize pg pg-hstore  
+- sequelize init  
