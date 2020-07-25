@@ -1,10 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import helmet from 'helmet';
+import cors from 'cors';
+
 import bookRoutes from './server/src/routes/BookRoutes';
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(helmet());
+app.use(cors());
 
 app.use('/api/v1/books', bookRoutes);
 
