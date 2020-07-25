@@ -9,7 +9,15 @@ class BookService {
         }
     }
 
-    static async getABook(ID) {
+    static async addBook(newBook) {
+        try {
+          return await database.Book.create(newBook);
+        } catch (error) {
+          throw error;
+        }
+      }
+
+    static async getSingleBook(ID) {
         try {
             const singleBook = await database.Book.findOne({
                 where: {id: Number(ID)}
@@ -57,3 +65,5 @@ class BookService {
         }
     }
 }
+
+export default BookService;
