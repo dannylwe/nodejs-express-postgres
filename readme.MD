@@ -19,7 +19,16 @@
 - npm install --save sequelize pg pg-hstore  
 - sequelize init  
 
+## Install postgres
+- docker pull postgres  
+- docker run --name new-postgresdb -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres  
 
+## Go to postgres container
+- docker exec -it new-postgresdb psql -U postgres  
+- show users: \du  
+- show databases: \l  
+- create database: CREATE DATABASE books;  
+- create user with no password: CREATE USER danny;  
 
 
 
