@@ -33,10 +33,15 @@
 ## create sequelize migration and model
 - sequelize model:generate --name Book --attributes title:string,price:string,description:string  
 
-
+## Test Coverage  
+- npm install --save-dev mocha chai chai-http nyc
+- mocha for testing, chai for assertion and nyc for coverage
 
 
 
 
 ## Ref here:
 - https://medium.com/@victorsteven/restful-api-with-nodejs-express-postgresql-sequelize-travis-mocha-coveralls-and-code-climate-f28715f7a014  
+- https://coralogix.com/log-analytics-blog/morgan-npm-logger-the-complete-guide/  
+- https://medium.com/zero-equals-false/using-cors-in-express-cac7e29b005b  
+- https://medium.com/@Ayra_Lux/a-guide-to-orm-sequelize-c276c7b6dd18  

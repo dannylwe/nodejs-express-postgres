@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import cors from 'cors';
+import morgan from 'morgan';
 
 import bookRoutes from './server/src/routes/BookRoutes';
 
@@ -10,6 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(helmet());
 app.use(cors());
+app.use(morgan('dev'));
 
 app.use('/api/v1/books', bookRoutes);
 
