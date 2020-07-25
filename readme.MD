@@ -30,6 +30,9 @@
 - create database: CREATE DATABASE books;  
 - create user with no password: CREATE USER danny;  
 
+## create sequelize migration and model
+- sequelize model:generate --name Book --attributes title:string,price:string,description:string  
+
 
 
 
