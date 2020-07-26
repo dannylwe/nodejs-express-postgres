@@ -7,11 +7,12 @@ class BookController {
     static async getAllBooks(req, res) {
         try {
             const allBooks = await BookService.getAllBooks();
-            if(len(allBooks) > 0) {
+            if(allBooks.length > 0) {
                 util.setSuccess(200, 'Books retrieved', allBooks);
                 return util.send(res)
             }
-            util.setSuccess(200, 'No books found');
+            util.setError(200, 'No books found');
+            return util.send(res)
         } catch (error) {
             util.setError(404, error);
             return util.send(res);
@@ -21,13 +22,13 @@ class BookController {
     static async addSingleBook(req, res) {
         try {
             if(!req.body.title || !req.body.price || !req.body.description) {
-                util.setError(404, "Incomplete book details");
+                util.setError(400, "Incomplete book details");
                 return util.send(res)
             }
-            const newBook = req.Body;
+            const newBook = req.body
             try {
                 const createdBook = await BookService.addBook(newBook);
-                util.setSuccess(200, 'created book', createdBook);
+                util.setSuccess(201, 'created book', createdBook);
                 util.send(res);
             } catch(err) {
                 throw(err);

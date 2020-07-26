@@ -3,7 +3,7 @@ import database from '../models';
 class BookService {
     static async getAllBooks() {
         try {
-            return await database.Book.findAll();
+            return await database.Book.findAll({raw: true});
         } catch(error) {
             throw(error);
         }
