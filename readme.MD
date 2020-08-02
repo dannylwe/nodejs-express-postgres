@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/dannylwe/nodejs-express-postgres.svg?token=uFr3V6xNUs2otJzBXJqp&branch=master)](https://travis-ci.com/dannylwe/nodejs-express-postgres)
+
 ## Getting started  
 - npm init -y  
 - npm install --save express body-parser  
@@ -45,3 +47,5 @@
 - https://coralogix.com/log-analytics-blog/morgan-npm-logger-the-complete-guide/  
 - https://medium.com/zero-equals-false/using-cors-in-express-cac7e29b005b  
 - https://medium.com/@Ayra_Lux/a-guide-to-orm-sequelize-c276c7b6dd18  
+- https://hub.docker.com/_/postgres?tab=description  
+- https://www.twilio.com/blog/guide-node-js-logging  
